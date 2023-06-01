@@ -1,0 +1,74 @@
+<mvc:View controllerName="create.firstapp.controller.Home" 
+xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core"
+	displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="Home Table">
+        <VBox
+        >
+            <Button text="Insert" id="in" press="onPressDialog"/>
+        </VBox>
+
+        <Table id="idProductsTable"
+		items="{
+			path: 'modelloDati>/Fornitori' 
+		}">
+		<columns>
+			<Column>
+				<Text text="ID Fornitore" />
+			</Column>
+			<Column>
+				<Text text="Nome Compagnia" />
+			</Column>
+			<Column>
+				<Text text="Nome Contatto" />
+			</Column>
+            <Column>
+				<Text text="Titolo" />
+			</Column>
+			<Column>
+				<Text text="Indirizzo" />
+			</Column>
+			<Column>
+				<Text text="Città" />
+			</Column>
+            <Column>
+				<Text text="Regione" />
+			</Column>
+			<Column>
+				<Text text="Codice Postale" />
+			</Column>
+			<Column>
+				<Text text="Paese" />
+			</Column>
+            <Column>
+				<Text text="Telefono" />
+			</Column>
+			<Column>
+				<Text text="Fax" />
+			</Column>
+			<Column/>	
+			<Column/>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<Text text="{path: 'modelloDati>SupplierID'}"></Text>
+                    <Text text="{path: 'modelloDati>CompanyName'}"></Text>
+                    <Text text="{path: 'modelloDati>ContactName'}"></Text>
+                    <Text text="{path: 'modelloDati>ContactTitle'}"></Text>
+                    <Text text="{path: 'modelloDati>Address'}"></Text>
+                    <Text text="{path: 'modelloDati>City'}"></Text>
+                    <Text text="{path: 'modelloDati>Region'}"></Text>
+                    <Text text="{path: 'modelloDati>PostalCode'}"></Text>
+                    <Text text="{path: 'modelloDati>Country'}"></Text>
+                    <Text text="{path: 'modelloDati>Phone'}"></Text>
+                    <Text text="{path: 'modelloDati>Fax'}"></Text>
+					<Button text="Edit" press="onRiga" icon="sap-icon://edit"/>
+					<Button text="Delete" press="onDelete" icon="sap-icon://delete"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+    </Page>
+</mvc:View>
